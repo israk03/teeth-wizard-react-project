@@ -2,7 +2,7 @@ import bannerImg from "../../assets/banner.png";
 export default function Banner() {
   return (
     <div>
-      <div className="hero bg-base-200 w-[80%] mx-auto mt-10 max-w-[1000px] rounded-lg shadow-md">
+      <div className="hero bg-base-200 w-[80%] mx-auto mt-20 max-w-[1000px] rounded-lg shadow-md">
         <div className="hero-content flex-col lg:flex-row">
           <img src={bannerImg} className="max-w-sm rounded-lg shadow-2xl" />
           <div className="text-center">
