@@ -1,6 +1,7 @@
 import { NavLink, useLoaderData } from "react-router-dom";
 import Banner from "./Banner/Banner";
 import ServiceCard from "../ServiceCard/ServiceCard";
+import Feedback from "./Feedback.jsx/Feedback";
 
 export default function Home() {
   const services = useLoaderData();
@@ -18,6 +19,8 @@ export default function Home() {
       <button className="btn btn-primary block mx-auto mt-30px mb-[90px] px-6">
         <NavLink to="/treatments">More</NavLink>
       </button>
+
+      <Feedback feedbackData={feedbackData}></Feedback>
     </div>
   );
 }
