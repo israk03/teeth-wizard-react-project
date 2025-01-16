@@ -10,7 +10,7 @@ export default function Navbar() {
           to="/"
           className={({ isActive }) =>
             isActive
-              ? "bg-blue-950 text-white px-3 py-2 rounded"
+              ? " text-white px-3 py-2 rounded"
               : "text-white px-3 py-2 rounded hover:bg-blue-800"
           }
         >
@@ -22,7 +22,7 @@ export default function Navbar() {
           to="/treatments"
           className={({ isActive }) =>
             isActive
-              ? "bg-blue-950 text-white px-3 py-2 rounded"
+              ? " text-white px-3 py-2 rounded"
               : "text-white px-3 py-2 rounded hover:bg-blue-800"
           }
         >
@@ -34,7 +34,7 @@ export default function Navbar() {
           to="/appointments"
           className={({ isActive }) =>
             isActive
-              ? "bg-blue-950 text-white px-3 py-2 rounded"
+              ? " text-white px-3 py-2 rounded"
               : "text-white px-3 py-2 rounded hover:bg-blue-800"
           }
         >
@@ -46,7 +46,7 @@ export default function Navbar() {
           to="/profile"
           className={({ isActive }) =>
             isActive
-              ? "text-blue-950 px-3 py-2 rounded"
+              ? " px-3 py-2 rounded"
               : "text-white px-3 py-2 rounded hover:bg-blue-800"
           }
         >
@@ -57,8 +57,8 @@ export default function Navbar() {
   );
 
   return (
-    <div className="bg-blue-800">
-      <div className="w-11/12 mx-auto navbar bg-blue-800 text-white">
+    <div className="bg-blue-950 text-white">
+      <div className="w-11/12 mx-auto navbar bg-blue-950 text-white">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

@@ -14,7 +14,7 @@ export default function Banner() {
               explore treatments, and connect with expert dentists—all in one
               place.
             </p>
-            <button className="btn btn-primary">BOOK NOW!</button>
+            <button className="btn bg-blue-950 text-white">BOOK NOW!</button>
           </div>
         </div>
       </div>

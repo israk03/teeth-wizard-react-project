@@ -13,7 +13,7 @@ export default function FeedbackCard({ feedback }) {
 
           <p>{review}</p>
           <div className="card-actions justify-end">
-            <button className="btn btn-primary">Buy Now</button>
+            <button className="btn bg-blue-950 text-white">View</button>
           </div>
         </div>
       </div>

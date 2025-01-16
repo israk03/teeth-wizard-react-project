@@ -14,7 +14,9 @@ export default function ServiceCard({ service }) {
         </h2>
         <p>{description.slice(0, 100)}...</p>
         <div className="card-actions justify-end">
-          <button className="btn btn-primary">Checkout more</button>
+          <button className="btn bg-blue-950 text-white rounded-full">
+            Checkout more
+          </button>
         </div>
       </div>
     </div>

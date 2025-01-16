@@ -16,7 +16,7 @@ export default function Home() {
           <ServiceCard service={service}></ServiceCard>
         ))}
       </div>
-      <button className="btn btn-primary block mx-auto mt-30px mb-[90px] px-6">
+      <button className="btn bg-blue-950 text-white block mx-auto mt-30px mb-[90px] px-6">
         <NavLink to="/treatments">More</NavLink>
       </button>
 
