@@ -2,7 +2,7 @@ import React from "react";
 import FeedbackCard from "./FeedbackCard";
 
 export default function Feedback({ feedbackData }) {
-  console.log(feedbackData);
+  // console.log(feedbackData);
   return (
     <div>
       <h2 className="text-4xl text-center mb-5 font-semibold">

@@ -1,7 +1,8 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 export default function ServiceCard({ service }) {
-  const { treatment, image, description, cost } = service;
+  const { treatment, image, description, cost, id } = service;
   return (
     <div className="card bg-base-100 gap-10 p-5 m-5 shadow-xl">
       <figure>
@@ -14,9 +15,11 @@ export default function ServiceCard({ service }) {
         </h2>
         <p>{description.slice(0, 100)}...</p>
         <div className="card-actions justify-end">
-          <button className="btn bg-blue-950 text-white rounded-full">
-            Checkout more
-          </button>
+          <NavLink to={`/details/${id}`}>
+            <button className="btn bg-blue-950 text-white rounded-full">
+              Checkout more
+            </button>
+          </NavLink>
         </div>
       </div>
     </div>

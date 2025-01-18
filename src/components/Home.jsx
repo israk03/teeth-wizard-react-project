@@ -6,7 +6,7 @@ import Feedback from "./Feedback.jsx/Feedback";
 export default function Home() {
   const services = useLoaderData();
   const { servicesData, feedbackData } = services;
-  console.log(services);
+  //   console.log(services);
   return (
     <div>
       <Banner></Banner>
