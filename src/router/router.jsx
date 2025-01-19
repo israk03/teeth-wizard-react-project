@@ -5,6 +5,8 @@ import MyAppoinments from "../components/MyAppoinments/MyAppoinments";
 import AllTreatments from "../components/AllTreatments/AllTreatments";
 import Profile from "../components/Profile/Profile";
 import Details from "../components/Details/Details";
+import Login from "../components/Login/Login";
+import Register from "../components/Register/Register";
 
 const router = createBrowserRouter([
   {
@@ -47,6 +49,14 @@ const router = createBrowserRouter([
           //   console.log(singleData);
           return singleData;
         },
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/register",
+        element: <Register></Register>,
       },
     ],
   },

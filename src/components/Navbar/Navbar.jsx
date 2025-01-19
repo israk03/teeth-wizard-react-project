@@ -1,4 +1,5 @@
 import React from "react";
+// import Navbar from "../Navbar/Navbar.css";
 import { GiFrontTeeth } from "react-icons/gi";
 import { Link, NavLink } from "react-router-dom";
 
@@ -87,14 +88,16 @@ export default function Navbar() {
 
           <Link to="/" className="btn btn-ghost text-xl text-white">
             <GiFrontTeeth />
-            NAHID TEETH WIZARD
+            TEETH WIZARD
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
         <div className="navbar-end">
-          <a className="btn btn-primary">Login</a>
+          <NavLink to="/login" className="btn btn-primary">
+            Login
+          </NavLink>
         </div>
       </div>
     </div>
