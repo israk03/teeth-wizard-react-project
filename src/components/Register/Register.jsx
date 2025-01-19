@@ -11,7 +11,20 @@ export default function Register() {
             </label>
             <input
               type="text"
+              name="name"
               placeholder="name"
+              className="input input-bordered"
+              required
+            />
+          </div>
+          <div className="form-control">
+            <label className="label">
+              <span className="label-text">Photo URL</span>
+            </label>
+            <input
+              type="text"
+              name="photo"
+              placeholder="photo url"
               className="input input-bordered"
               required
             />
@@ -22,6 +35,7 @@ export default function Register() {
             </label>
             <input
               type="email"
+              name="email"
               placeholder="email"
               className="input input-bordered"
               required
@@ -33,6 +47,7 @@ export default function Register() {
             </label>
             <input
               type="password"
+              name="password"
               placeholder="password"
               className="input input-bordered"
               required
