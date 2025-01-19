@@ -1,5 +1,6 @@
 import React from "react";
 import { useLoaderData } from "react-router-dom";
+import Modal from "../Modal/Modal";
 
 export default function Details() {
   const { treatment, image, description, cost } = useLoaderData();
@@ -17,9 +18,13 @@ export default function Details() {
             <p className="text-lg font-semibold text-blue-950">Cost: ${cost}</p>
           </div>
           <div className="card-actions justify-end mt-4">
-            <button className="btn bg-blue-950 text-white">
+            <button
+              onClick={() => document.getElementById("my_modal_1").showModal()}
+              className="btn bg-blue-950 text-white"
+            >
               Book Appointment
             </button>
+            <Modal></Modal>
           </div>
         </div>
       </div>

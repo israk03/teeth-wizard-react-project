@@ -87,7 +87,7 @@ export default function Navbar() {
 
           <Link to="/" className="btn btn-ghost text-xl text-white">
             <GiFrontTeeth />
-            TEETH WIZARD
+            NAHID TEETH WIZARD
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
