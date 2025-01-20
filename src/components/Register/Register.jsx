@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { authContext } from "../../AuthProvider/AuthProvider";
 
 export default function Register() {
-  const { handleRegister } = useContext(authContext);
+  const { handleRegister, updateUser } = useContext(authContext);
   const [error, setError] = useState("");
   const handleForm = (e) => {
     e.preventDefault();
@@ -28,7 +28,9 @@ export default function Register() {
       return;
     }
 
-    handleRegister(email, password);
+    handleRegister(email, password).then((res) => {
+      updateUser(name, photo);
+    });
   };
   return (
     <div className="hero bg-base-200 min-h-screen">

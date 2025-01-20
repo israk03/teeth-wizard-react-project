@@ -1,21 +1,40 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { authContext } from "../../AuthProvider/AuthProvider";
 
 export default function Login() {
-  const { handleRegister, handleLogin, handleGoogleLogin, handleLogout } =
+  const [error, setError] = useState("");
+  const { handleLogin, handleGoogleLogin, handleLogout } =
     useContext(authContext);
+
+  const handleForm = (e) => {
+    e.preventDefault();
+    setError("");
+
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+
+    handleLogin(email, password)
+      .then((res) => {
+        console.log(res.user);
+      })
+      .catch((error) => {
+        const err = error.message;
+        setError(err);
+      });
+  };
 
   return (
     <div className="hero bg-base-200 min-h-screen">
       <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-        <form className="card-body">
+        <form onSubmit={handleForm} className="card-body">
           <div className="form-control">
             <label className="label">
               <span className="label-text">Email</span>
             </label>
             <input
               type="email"
+              name="email"
               placeholder="email"
               className="input input-bordered"
               required
@@ -27,6 +46,7 @@ export default function Login() {
             </label>
             <input
               type="password"
+              name="password"
               placeholder="password"
               className="input input-bordered"
               required
@@ -81,6 +101,7 @@ export default function Login() {
             </button>
           </div>
         </form>
+        {error && <p className="text-red-600 text-center pb-7 px-4">{error}</p>}
       </div>
     </div>
   );
