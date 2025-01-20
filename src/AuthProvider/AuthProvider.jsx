@@ -14,6 +14,7 @@ export const authContext = createContext();
 
 export default function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   const googleProvider = new GoogleAuthProvider();
 
@@ -46,7 +47,10 @@ export default function AuthProvider({ children }) {
       console.log(currentUser);
       if (currentUser) {
         setUser(currentUser);
+      } else {
+        setUser(null);
       }
+      setLoading(false);
     });
 
     return () => {
@@ -60,6 +64,9 @@ export default function AuthProvider({ children }) {
     handleGoogleLogin,
     handleLogout,
     updateUser,
+    user,
+    setUser,
+    loading,
   };
 
   return (

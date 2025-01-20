@@ -1,6 +1,6 @@
 import { NavLink, useLoaderData } from "react-router-dom";
 import Banner from "./Banner/Banner";
-import ServiceCard from "../ServiceCard/ServiceCard";
+import ServiceCard from "./ServiceCard/ServiceCard";
 import Feedback from "./Feedback.jsx/Feedback";
 
 export default function Home() {
