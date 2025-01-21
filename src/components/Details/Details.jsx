@@ -24,7 +24,7 @@ export default function Details() {
             >
               Book Appointment
             </button>
-            <Modal></Modal>
+            <Modal treatment={treatment}></Modal>
           </div>
         </div>
       </div>

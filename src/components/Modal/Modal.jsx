@@ -1,6 +1,32 @@
-export default function Modal() {
+import { useContext } from "react";
+import { authContext } from "../../AuthProvider/AuthProvider";
+
+export default function Modal({ treatment }) {
+  const { user } = useContext(authContext);
   const handleSubmit = (e) => {
     e.preventDefault();
+    const name = e.target.name.value;
+    const email = e.target.email.value;
+    const phone = e.target.phone.value;
+    const address = e.target.address.value;
+    const date = e.target.date.value;
+    // const treatment = treatment;
+    const info = {
+      name,
+      email,
+      phone,
+      address,
+      date,
+      treatment,
+    };
+
+    let saveData = [];
+    const localData = localStorage.getItem("appointments");
+    if (localData) {
+      saveData = JSON.parse(localData);
+    }
+    saveData.push(info);
+    localStorage.setItem("appointments", JSON.stringify(saveData));
   };
   return (
     <dialog id="my_modal_1" className="modal">
@@ -27,6 +53,7 @@ export default function Modal() {
                 type="text"
                 className="grow"
                 placeholder="Your email"
+                value={user?.email}
               />
             </label>
           </div>

@@ -98,9 +98,19 @@ export default function Navbar() {
         </div>
         <div className="navbar-end">
           {user ? (
-            <button onClick={handleLogout} className="btn btn-primary">
-              Logout
-            </button>
+            <div className="flex items-center justify-center gap-3">
+              <NavLink to="/profile">
+                <img
+                  className="rounded-full w-15 h-10"
+                  src={user?.photoURL}
+                  alt=""
+                />
+              </NavLink>
+
+              <button onClick={handleLogout} className="btn btn-primary">
+                Logout
+              </button>
+            </div>
           ) : (
             <NavLink to="/login" className="btn btn-primary">
               Login
