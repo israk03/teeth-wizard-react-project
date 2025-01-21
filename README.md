@@ -1,8 +1,28 @@
-# React + Vite
+# Teeth Wizard 🦷✨
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Teeth Wizard** is a React-based web application designed for managing dental appointments, user profiles, and authentication. The app features a clean UI built with TailwindCSS and DaisyUI and integrates Firebase for secure authentication.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌐 Live Link
+
+Check out the live application here: [Teeth Wizard](https://your-project-name.vercel.app)
+
+---
+
+## 🚀 Features
+
+- **Authentication**: User login, registration, and Google sign-in using Firebase.
+- **Appointments**: Book, save, and view appointments locally.
+- **Profile Management**: View and manage user profile details.
+- **Private Routes**: Secure routes accessible only to authenticated users.
+- **Responsive Design**: Fully optimized for desktop and mobile screens.
+
+---
+
+## 🛠️ Technologies Used
+
+- **Frontend**: React, TailwindCSS, DaisyUI
+- **Backend**: Firebase Authentication
+- **Routing**: React Router
+- **Deployment**: Vercel

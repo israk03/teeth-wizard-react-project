@@ -8,12 +8,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCvXmlxh6JDc0heVkM3JonmUChQh0qFILE",
-  authDomain: "teeth-wizard-auth.firebaseapp.com",
-  projectId: "teeth-wizard-auth",
-  storageBucket: "teeth-wizard-auth.firebasestorage.app",
-  messagingSenderId: "96166863850",
-  appId: "1:96166863850:web:71f183cbe4eb00e9b00893",
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket: import.meta.env.VITE_storageBucket,
+  messagingSenderId: import.meta.env.VITE_messagingSenderId,
+  appId: import.meta.env.VITE_appId,
 };
 
 // Initialize Firebase
