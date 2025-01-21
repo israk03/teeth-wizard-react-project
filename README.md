@@ -6,7 +6,7 @@
 
 ## 🌐 Live Link
 
-Check out the live application here: [Teeth Wizard](https://your-project-name.vercel.app)
+Check out the live application here: [Teeth Wizard](https://teeth-wizard-auth.web.app)
 
 ---
 
