@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 // import Navbar from "../Navbar/Navbar.css";
 import { GiFrontTeeth } from "react-icons/gi";
 import { Link, NavLink } from "react-router-dom";
+import { authContext } from "../../AuthProvider/AuthProvider";
 
 export default function Navbar() {
+  const { user, handleLogout } = useContext(authContext);
   const links = (
     <>
       <li>
@@ -95,9 +97,15 @@ export default function Navbar() {
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
         <div className="navbar-end">
-          <NavLink to="/login" className="btn btn-primary">
-            Login
-          </NavLink>
+          {user ? (
+            <button onClick={handleLogout} className="btn btn-primary">
+              Logout
+            </button>
+          ) : (
+            <NavLink to="/login" className="btn btn-primary">
+              Login
+            </NavLink>
+          )}
         </div>
       </div>
     </div>

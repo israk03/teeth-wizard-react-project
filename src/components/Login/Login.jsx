@@ -1,11 +1,14 @@
 import { useContext, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { authContext } from "../../AuthProvider/AuthProvider";
 
 export default function Login() {
   const [error, setError] = useState("");
   const { handleLogin, handleGoogleLogin, handleLogout } =
     useContext(authContext);
+  const location = useLocation();
+  console.log(location);
+  const navigate = useNavigate();
 
   const handleForm = (e) => {
     e.preventDefault();
@@ -16,11 +19,24 @@ export default function Login() {
 
     handleLogin(email, password)
       .then((res) => {
-        console.log(res.user);
+        // console.log(res.user);
+        // navigate(location.state.from);
+        const from = location.state?.from?.pathname || "/";
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         const err = error.message;
         setError(err);
+      });
+  };
+  const handleGoogle = () => {
+    handleGoogleLogin()
+      .then(() => {
+        const from = location.state?.from?.pathname || "/";
+        navigate(from, { replace: true });
+      })
+      .catch((error) => {
+        setError(error.message);
       });
   };
 
@@ -73,7 +89,7 @@ export default function Login() {
             <button
               type="button"
               className="btn btn-outline border-blue-950 text-blue-950 hover:bg-blue-950 hover:text-white flex items-center gap-2"
-              onClick={handleGoogleLogin}
+              onClick={handleGoogle}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
